@@ -41,7 +41,8 @@ For convenience, utility methods like `distance()`, `lerp()`, and `clamp()` are 
 The matrix type is a very simple struct:
 
 ```cpp
-struct matrix {
+struct matrix
+{
     float mvp_matrix[16];
 };
 ```
