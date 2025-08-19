@@ -44,5 +44,3 @@ Tip: For float equality, consider replacing `==` with an epsilon-based compariso
 
 ---
 
-👉 Would you like me to also draft a **“Getting Started”** section with a quick `#include` example and how to add it to a project, so the README feels more polished for GitHub?
-
