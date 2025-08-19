@@ -78,7 +78,8 @@ struct vector2
     vector2 normalized() const
     {
         float len = length();
-        if (len > 0.0f) {
+        if (len > 0.0f) 
+		{
             return *this / len;
         }
         return { 0.0f, 0.0f };
@@ -87,7 +88,8 @@ struct vector2
     void normalize()
     {
         float len = length();
-        if (len > 0.0f) {
+        if (len > 0.0f) 
+		{
             *this /= len;
         }
     }
@@ -111,7 +113,8 @@ struct vector2
 
     static vector2 clamp(const vector2& v, const vector2& min, const vector2& max)
     {
-        return {
+        return 
+		{
             std::clamp(v.x, min.x, max.x),
             std::clamp(v.y, min.y, max.y)
         };
@@ -195,7 +198,8 @@ struct vector3
     void normalize() 
     {
         float len = length();
-        if (len > 0.0f) {
+        if (len > 0.0f) 
+		{
             *this /= len;
         }
     }
@@ -219,7 +223,8 @@ struct vector3
 
     static vector3 clamp(const vector3& v, const vector3& min, const vector3& max) 
     {
-        return {
+        return 
+		{
             std::clamp(v.x, min.x, max.x),
             std::clamp(v.y, min.y, max.y),
             std::clamp(v.z, min.z, max.z)
@@ -288,7 +293,8 @@ struct vector4
     vector4 normalized() const
     {
         float len = length();
-        if (len > 0.0f) {
+        if (len > 0.0f) 
+		{
             return *this / len;
         }
         return { 0.0f, 0.0f, 0.0f, 0.0f };
@@ -297,7 +303,8 @@ struct vector4
     void normalize()
     {
         float len = length();
-        if (len > 0.0f) {
+        if (len > 0.0f)
+		{
             *this /= len;
         }
     }
@@ -344,5 +351,6 @@ struct matrix
 {
     float mvp_matrix[16];
 };
+
 
 
