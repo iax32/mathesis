@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="Mathesis Logo" width="300">
+  <img src="mathesis.png" alt="Mathesis Logo" width="300">
 </p>
 
 <h1 align="center">Mathesis</h1>
