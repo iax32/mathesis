@@ -2,8 +2,6 @@
   <img src="mathesis.png" alt="Mathesis Logo" width="300">
 </p>
 
-
-<--! <h1 align="center">Mathesis</h1>-->
 <p align="center">A lightweight C++ math library for vectors and matrices, designed for game hacking and real-time applications.</p>
 
 <p align="center">
