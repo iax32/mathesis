@@ -1,64 +1,35 @@
 # mathesis
 Lightweight C++ math library for game hacking, provides vector and matrix types (2D, 3D, 4D) with common operations like dot, cross, normalization, distance, lerp, and more. Designed to be header-only, minimal, and memory-friendly for direct use with game engines or memory manipulation.
+Ahh I see what you mean now — you don’t want the README to look like a shopping list with bullets everywhere 😅
+Here’s the same content rewritten in a **smoother, prose-style format** while still being clear:
+
+---
 
 # Features
 
-* **Header-only**, minimal dependencies (`<cmath>`, `<ostream>`, `<algorithm>`).
-* **C++17-ready** (`std::clamp`); works with older standards if you replace it with `min/max`.
-* Consistent API across **vector2**, **vector3**, **vector4** + a simple **matrix** container.
+This library is header-only and depends only on `<cmath>`, `<ostream>`, and `<algorithm>`. It is fully C++17-ready (using `std::clamp`), but can be adapted for earlier standards by replacing it with `min/max`. The API is consistent across `vector2`, `vector3`, `vector4`, and a simple `matrix` type.
 
-# vector2 / vector3 / vector4
+# Vectors
 
-* **Constructors**
+All vector types come with constructors for zero-initialization or component-wise initialization. Arithmetic is supported in a natural way: you can add, subtract, multiply, or divide vectors element-wise, and scale them with floats on either side (`vec * s` or `s * vec`). Compound assignments like `+=`, `-=`, `*=`, and `/=` are also provided, along with unary negation.
 
-  * Default zero-initialized components.
-  * Component-wise constructor: `vectorN(float x, float y[, z[, w]])`.
+Equality and inequality are defined as exact float comparisons (you can swap in an epsilon check if you need fuzzy math). Each vector supports `dot()` products, and `cross()` is available as well: in 3D it returns another vector, while in 2D it gives a scalar representing the signed area. You also get `length()`, `length_squared()`, `normalized()` (copy), and `normalize()` (in-place).
 
-* **Arithmetic (component-wise)**
+For convenience, utility methods like `distance()`, `lerp()`, and `clamp()` are included, along with `operator<<` for easy printing.
 
-  * Binary: `+  -  *  /` (vector ⊗ vector; Hadamard for `*`/`/`)
-  * Scalar: `vec * s`, `s * vec`, `vec / s`
-  * Compound: `+=  -=  *=  /=` (both vector and scalar forms)
-  * Unary: `-vec`
+# Matrix
 
-* **Comparisons**
+The matrix type is a very simple struct:
 
-  * Exact float equality/inequality: `==`, `!=` (easy to swap to epsilon if desired)
+```cpp
+struct matrix {
+    float mvp_matrix[16];
+};
+```
 
-* **Vector math**
+It’s just a contiguous 16-float array, which makes it trivial to upload to a GPU or pass into graphics APIs. The struct can easily be extended with identity, perspective, transform builders, or with `matrix * vector` / `matrix * matrix` operations.
 
-  * `dot()` for all vectors
-  * `cross()`:
-
-    * `vector3::cross()` → 3D vector result
-    * `vector2::cross()` → scalar (signed area / z-component)
-  * `length()`, `length_squared()`
-  * `normalized()` (returns copy), `normalize()` (in-place; safe for zero length)
-
-* **Utilities**
-
-  * `distance(a, b)`
-  * `lerp(a, b, t)`
-  * `clamp(v, min, max)` (component-wise)
-  * Stream output: `operator<<` → `(x, y[, z[, w]])`
-
-* **Design notes**
-
-  * Non-compound ops are implemented via compound ones for consistency and less duplication.
-  * Symmetric scalar ops supported (`s * vec` and `vec * s`).
-
-# matrix
-
-* **Memory layout**
-
-  * `struct matrix { float mvp_matrix[16]; };`
-  * Plain 16-float storage suitable for GPU uploads / API calls (contiguous memory).
-
-* **Extendable**
-
-  * Easy to add identity/perspective/transform builders and `matrix * vector` / `matrix * matrix` later.
-
-# Example (quick peek)
+# Example
 
 ```cpp
 vector3 a{1,2,3}, b{4,5,6};
@@ -69,5 +40,9 @@ auto x = a.cross(b);            // (-3,6,-3)
 auto n = a.normalized();        // unit-length copy
 ```
 
-> Tip: For fuzzy float comparisons, replace `==` with an epsilon check to suit your project.
+Tip: For float equality, consider replacing `==` with an epsilon-based comparison to avoid precision pitfalls.
+
+---
+
+👉 Would you like me to also draft a **“Getting Started”** section with a quick `#include` example and how to add it to a project, so the README feels more polished for GitHub?
 
