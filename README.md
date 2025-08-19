@@ -7,10 +7,10 @@
 
 <p align="center">
   <a href="https://github.com/your-username/Mathesis/stargazers">
-    <img src="https://img.shields.io/github/stars/your-username/Mathesis?style=flat-square&color=yellow" alt="GitHub stars">
+    <img src="https://img.shields.io/github/stars/iax32/mathesis?style=flat-square&color=yellow" alt="GitHub stars">
   </a>
   <a href="https://github.com/your-username/Mathesis/issues">
-    <img src="https://img.shields.io/github/issues/your-username/Mathesis?style=flat-square&color=red" alt="GitHub issues">
+    <img src="https://img.shields.io/github/issues/iax32/mathesis?style=flat-square&color=red" alt="GitHub issues">
   </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="License">
