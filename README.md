@@ -1,5 +1,22 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/your-username/your-repo/main/assets/logo.png" alt="Project Logo" width="400"/>
+  <img src="assets/logo.png" alt="Mathesis Logo" width="300">
+</p>
+
+<h1 align="center">Mathesis</h1>
+<p align="center">A lightweight C++ math library for vectors and matrices, designed for game hacking and real-time applications.</p>
+
+<p align="center">
+  <a href="https://github.com/your-username/Mathesis/stargazers">
+    <img src="https://img.shields.io/github/stars/your-username/Mathesis?style=flat-square&color=yellow" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/your-username/Mathesis/issues">
+    <img src="https://img.shields.io/github/issues/your-username/Mathesis?style=flat-square&color=red" alt="GitHub issues">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/C++-17-blue.svg?style=flat-square" alt="C++17">
+  <img src="https://img.shields.io/badge/math-vectors%20%7C%20matrices-lightgrey.svg?style=flat-square" alt="Mathesis features">
 </p>
 
 
