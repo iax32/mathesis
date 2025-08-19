@@ -1,10 +1,10 @@
 
    _____          __  .__                  .__        
-  /     \ _____ _/  |_|  |__   ____   _____|__| ______
- /  \ /  \\__  \\   __\  |  \_/ __ \ /  ___/  |/  ___/
-/    Y    \/ __ \|  | |   Y  \  ___/ \___ \|  |\___ \ 
-\____|__  (____  /__| |___|  /\___  >____  >__/____  >
-        \/     \/          \/     \/     \/        \/ 
+  /     \ _____ _/  |_|  |__   ____   _____|__| ______ <br>
+ /  \ /  \\__  \\   __\  |  \_/ __ \ /  ___/  |/  ___/ <br>
+/    Y    \/ __ \|  | |   Y  \  ___/ \___ \|  |\___ \  <br>
+\____|__  (____  /__| |___|  /\___  >____  >__/____  > <br>
+        \/     \/          \/     \/     \/        \/ <br>
 Lightweight C++ math library for game hacking, provides vector and matrix types (2D, 3D, 4D) with common operations like dot, cross, normalization, distance, lerp, and more. Designed to be header-only, minimal, and memory-friendly for direct use with game engines or memory manipulation.
 Ahh I see what you mean now — you don’t want the README to look like a shopping list with bullets everywhere 😅
 Here’s the same content rewritten in a **smoother, prose-style format** while still being clear:
